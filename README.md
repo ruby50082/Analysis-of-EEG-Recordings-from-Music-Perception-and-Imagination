@@ -29,6 +29,35 @@
     - 2nd layer: 4 class
     Each category trains a model
     - Use 10-fold validation
+    
+## Accuracy
+1. 1-Stage Model
+||3s|4s|5s|6s|
+|---|---|---|---|---|
+|front|22.07%|`24.07%`|24.07|`29.63%`|
+|late|`24.07%`|22.22%|`27.78%`|24.07%|
+
+2. 2-Stage Model
+||3s|4s|5s|6s|
+|---|---|---|---|---|
+|1^st^ layer acc|57.31%|57.45%|55.82%|57.62%|
+|1^st^ category|17.35%|19.22%|42.31%|13.45%|
+|2^nd^ category|23.81%|25.73%|14.38%|40.29%|
+|3^rd^ category|35.42%|29.61%|23.53%|31.55%|
+|2^nd^ layer acc|25.93%|29.63%|29.63%|35.19%|
+
+2. Single-Person Model
+||3s|4s|5s|6s|
+|---|---|---|---|---|
+|P0 accuracy|42.71%|46.94%|45.00%|`62.50%`|
+|P1 accuracy|62.92%|`67.22%`|59.58%|55.83%|
+|P2 accuracy|`60.63%`|50.00%|50.83%|46.67%|
+|P3 accuracy|46.04%|`64.72%`|44.27%|60.83%|
+|P4 accuracy|55.42%|`61.11%`|46.67%|46.67%|
+|P5 accuracy|55.42%|55.28%|44.17%|`60.83%`|
+|P6 accuracy|42.71%|42.50%|`44.58%`|43.33%|
+|P7 accuracy|`67.50%`|48.89%|53.33%|47.50%|
+|P8 accuracy|57.29%|`61.94%`|48.33%|59.17%|
 
 ## Conclusion
 - The 1-stage model classifies the dataset to each music and gets the approximate same accuracy as the paper. Thus, we evaluate the model to fit each category and find that there is over fifty percent to classify correctly.
